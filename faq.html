@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — After Dark</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <img src="icon48.png" alt="After Dark skull icon" style="width:28px;height:28px;">
+        <span class="site-logo-text">After Dark</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="search-tools.html">Search Tools</a>
+        <a href="comparison-tools.html">Comparison Tools</a>
+        <a href="features.html">Features</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="theme-switcher" title="Switch theme">
+        <div class="theme-group">
+          <button class="theme-dot" data-theme="sandstone" style="background:#C4A878;" title="Sandstone"></button>
+          <button class="theme-dot" data-theme="greyblue"  style="background:#2A7A8A;" title="Greyblue"></button>
+          <button class="theme-dot" data-theme="coral"     style="background:#e8704a;" title="Coral"></button>
+          <button class="theme-dot" data-theme="classic"   style="background:#4a6fa5;" title="Classic"></button>
+        </div>
+        <div class="theme-group-divider"></div>
+        <div class="theme-group">
+          <button class="theme-dot" data-theme="oshkosh"  style="background:#ffcc00;" title="UWOSH"></button>
+          <button class="theme-dot" data-theme="uwmilw"   style="background:#ffbd00;" title="UWMILW"></button>
+          <button class="theme-dot" data-theme="stout"    style="background:#4A7C9F;" title="UWSTOUT"></button>
+          <button class="theme-dot" data-theme="greenbay" style="background:#1a6b52;" title="UWGB"></button>
+          <button class="theme-dot" data-theme="madison"  style="background:#c5050c;" title="UWM"></button>
+          <button class="theme-dot" data-theme="stevens"  style="background:#432C91;" title="UWSP"></button>
+          <button class="theme-dot" data-theme="uwec"     style="background:#2C3C88;" title="UWEC"></button>
+          <button class="theme-dot" data-theme="uwlax"    style="background:#83151d;" title="UWLAX"></button>
+          <button class="theme-dot" data-theme="uwp"      style="background:#1a5c38;" title="UWP"></button>
+          <button class="theme-dot" data-theme="uwplt"    style="background:#1A64B7;" title="UWPLT"></button>
+          <button class="theme-dot" data-theme="uwrf"     style="background:#D31145;" title="UWRF"></button>
+          <button class="theme-dot" data-theme="uwsup"    style="background:#FCCC2D;" title="UWSUP"></button>
+          <button class="theme-dot" data-theme="uww"      style="background:#512884;" title="UWW"></button>
+          <button class="theme-dot" data-theme="wisconsin" style="background:#005777;" title="Wisconsin"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1>Frequently Asked Questions</h1>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="doc-section">
+
+      <h2>General</h2>
+
+      <h3>Who is After Dark for?</h3>
+      <p>After Dark is designed for Canvas LMS administrators &mdash; people who need to search, audit, and compare courses and users across an entire institution. It is not intended for faculty or students.</p>
+
+      <h3>Does After Dark store my Canvas data?</h3>
+      <p>No. After Dark routes all requests through your existing Canvas browser session. Data is fetched live from Canvas and displayed in the extension &mdash; nothing is sent to external servers or stored beyond your local browser session. See the <a href="privacy.html">Privacy &amp; Security</a> page for full details.</p>
+
+      <h3>Does After Dark work outside the UW System?</h3>
+      <p>Yes. After Dark works with any Canvas LMS instance. The UW System themes are cosmetic &mdash; the tool itself connects to whatever Canvas URL you configure in the setup wizard.</p>
+
+      <h3>Which browsers are supported?</h3>
+      <p>After Dark works in Chrome and any Chromium-based browser including Microsoft Edge, Brave, and Arc. It does not work in Firefox or Safari.</p>
+
+      <h2>Technical</h2>
+
+      <h3>After Dark can&apos;t connect to Canvas. What do I do?</h3>
+      <p>Make sure you have a Canvas tab open and are logged in before opening After Dark. The extension routes requests through your active Canvas session &mdash; if no Canvas tab is open, it has nothing to connect through. Reload the Canvas tab and try again.</p>
+
+      <h3>Search results aren&apos;t showing up.</h3>
+      <p>Try reloading your Canvas tab. After Dark injects a small content script into Canvas pages to handle authentication &mdash; if the tab was open before After Dark was installed, it may need a reload to pick up the script.</p>
+
+      <h3>Can I use After Dark with a vanity URL?</h3>
+      <p>Yes. During setup (or in Settings afterwards) you can enter both a primary Canvas URL and a vanity URL. After Dark will recognize Canvas tabs on either URL.</p>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>After Dark &middot; Built by Brian Ledwell &middot; University of Wisconsin Oshkosh</p>
+    <p style="margin-top:6px;"><a href="privacy.html">Privacy &amp; Security</a> &middot; <a href="faq.html">FAQ</a></p>
+  </footer>
+
+  <script>
+    const STORAGE_KEY = 'adDocsTheme';
+    const html = document.documentElement;
+    function applyTheme(t) {
+      html.setAttribute('data-theme', t);
+      document.querySelectorAll('.theme-dot').forEach(d => d.classList.toggle('active', d.dataset.theme === t));
+      localStorage.setItem(STORAGE_KEY, t);
+    }
+    applyTheme(localStorage.getItem(STORAGE_KEY) || 'uwmilw');
+    document.querySelectorAll('.theme-dot').forEach(d => d.addEventListener('click', () => applyTheme(d.dataset.theme)));
+    document.querySelectorAll('.site-nav a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop());
+    });
+  </script>
+</body>
+</html>

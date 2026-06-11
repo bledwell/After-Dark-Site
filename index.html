@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="uwmilw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>After Dark — Canvas Admin Extension</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <img src="icon48.png" alt="After Dark skull icon" style="width:28px;height:28px;">
+        <span class="site-logo-text">After Dark</span>
+      </a>
+
+      <nav class="site-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="search-tools.html">Search Tools</a>
+        <a href="comparison-tools.html">Comparison Tools</a>
+        <a href="features.html">Features</a>
+        <a href="settings.html">Settings</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+
+      <!-- Theme Switcher -->
+      <div class="theme-switcher" title="Switch theme">
+        <div class="theme-group">
+          <button class="theme-dot" data-theme="sandstone"  style="background:#C4A878;"  title="Sandstone"></button>
+          <button class="theme-dot" data-theme="greyblue"   style="background:#2A7A8A;"  title="Greyblue"></button>
+          <button class="theme-dot" data-theme="coral"      style="background:#e8704a;"  title="Coral"></button>
+          <button class="theme-dot" data-theme="classic"    style="background:#4a6fa5;"  title="Classic"></button>
+        </div>
+        <div class="theme-group-divider"></div>
+        <div class="theme-group">
+          <button class="theme-dot" data-theme="oshkosh"    style="background:#ffcc00;"  title="UWOSH"></button>
+          <button class="theme-dot" data-theme="uwmilw"     style="background:#ffbd00;"  title="UWMILW"></button>
+          <button class="theme-dot" data-theme="stout"      style="background:#4A7C9F;"  title="UWSTOUT"></button>
+          <button class="theme-dot" data-theme="greenbay"   style="background:#1a6b52;"  title="UWGB"></button>
+          <button class="theme-dot" data-theme="madison"    style="background:#c5050c;"  title="UWM"></button>
+          <button class="theme-dot" data-theme="stevens"    style="background:#432C91;"  title="UWSP"></button>
+          <button class="theme-dot" data-theme="uwec"       style="background:#2C3C88;"  title="UWEC"></button>
+          <button class="theme-dot" data-theme="uwlax"      style="background:#83151d;"  title="UWLAX"></button>
+          <button class="theme-dot" data-theme="uwp"        style="background:#1a5c38;"  title="UWP"></button>
+          <button class="theme-dot" data-theme="uwplt"      style="background:#1A64B7;"  title="UWPLT"></button>
+          <button class="theme-dot" data-theme="uwrf"       style="background:#D31145;"  title="UWRF"></button>
+          <button class="theme-dot" data-theme="uwsup"      style="background:#FCCC2D;"  title="UWSUP"></button>
+          <button class="theme-dot" data-theme="uww"        style="background:#512884;"  title="UWW"></button>
+          <button class="theme-dot" data-theme="wisconsin"  style="background:#005777;"  title="Wisconsin"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-skull">
+      <img src="skull.png" alt="After Dark" style="width:72px;height:72px;object-fit:contain;">
+    </div>
+    <h1 class="hero-title">After <span>Dark</span></h1>
+    <p class="hero-tagline">The admin tool Canvas forgot to build.</p>
+    <p class="hero-sub">
+      A Chrome extension for Canvas LMS administrators. Faster course search,
+      cross-environment comparison, course watchlisting, org visualization,
+      people tools, and more — all without leaving your browser.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="getting-started.html">Get Started</a>
+      <a class="btn btn-ghost" href="https://github.com" target="_blank">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- ── Feature Grid ── -->
+  <div class="page-content">
+
+    <div class="section-header">
+      <h1>What After Dark Does</h1>
+      <p>Everything you've been doing in five browser tabs, done in one.</p>
+    </div>
+
+    <div class="feature-grid">
+      <a class="feature-card" href="search-tools.html" style="text-decoration:none;">
+        <div class="feature-card-icon">🔍</div>
+        <div class="feature-card-title">Course Search</div>
+        <div class="feature-card-desc">Search by name, instructor, or section number. Filter by term, sub-account, publish status, enrollment. Browse thousands of courses in seconds.</div>
+      </a>
+      <a class="feature-card" href="search-tools.html" style="text-decoration:none;">
+        <div class="feature-card-icon">👤</div>
+        <div class="feature-card-title">People Search</div>
+        <div class="feature-card-desc">Find any user by name or login. See enrollments grouped by term, page view history, last login status, and profile details.</div>
+      </a>
+      <a class="feature-card" href="comparison-tools.html" style="text-decoration:none;">
+        <div class="feature-card-icon">⚖️</div>
+        <div class="feature-card-title">Course Comparison</div>
+        <div class="feature-card-desc">Select two courses and compare their content side by side. See what's in one but not the other, with diff badges on every section.</div>
+      </a>
+      <a class="feature-card" href="comparison-tools.html" style="text-decoration:none;">
+        <div class="feature-card-icon">🌐</div>
+        <div class="feature-card-title">Cross-Environment Compare</div>
+        <div class="feature-card-desc">Compare the same course across Live, Test, and Beta environments simultaneously. See exactly what differs and which version is newer.</div>
+      </a>
+      <a class="feature-card" href="features.html" style="text-decoration:none;">
+        <div class="feature-card-icon">💀</div>
+        <div class="feature-card-title">The Vault</div>
+        <div class="feature-card-desc">Watchlist for courses you need to come back to. Add notes, archive old entries, and access your saved courses instantly.</div>
+      </a>
+      <a class="feature-card" href="comparison-tools.html#people-compare" style="text-decoration:none;">
+        <div class="feature-card-icon">🔗</div>
+        <div class="feature-card-title">Similar Activity</div>
+        <div class="feature-card-desc">Compare two users' page view history and highlight matching activity within a configurable time window. An activity timeline makes patterns visible at a glance.</div>
+      </a>
+      <a class="feature-card" href="features.html#org" style="text-decoration:none;">
+        <div class="feature-card-icon">📊</div>
+        <div class="feature-card-title">Org Visualization</div>
+        <div class="feature-card-desc">Sunburst and tree charts of your sub-account structure with live course counts. See your institution's hierarchy at a glance.</div>
+      </a>
+      <a class="feature-card" href="features.html" style="text-decoration:none;">
+        <div class="feature-card-icon">🔬</div>
+        <div class="feature-card-title">Course Audit</div>
+        <div class="feature-card-desc">Deep-dive into a course's grading patterns, discussion activity, Kaltura usage, and content inventory. Flag potential academic integrity concerns.</div>
+      </a>
+      <a class="feature-card" href="comparison-tools.html" style="text-decoration:none;">
+        <div class="feature-card-icon">🗺️</div>
+        <div class="feature-card-title">Blueprint Tools</div>
+        <div class="feature-card-desc">Browse master courses and their associated children. View sync history and compare blueprint children side by side.</div>
+      </a>
+      <a class="feature-card" href="features.html" style="text-decoration:none;">
+        <div class="feature-card-icon">🎭</div>
+        <div class="feature-card-title">Demo Mode</div>
+        <div class="feature-card-desc">Scramble names, SIS IDs, and email addresses for safe screen sharing in meetings or presentations.</div>
+      </a>
+      <a class="feature-card" href="features.html" style="text-decoration:none;">
+        <div class="feature-card-icon">🎨</div>
+        <div class="feature-card-title">Themes</div>
+        <div class="feature-card-desc">17 colour themes including every UW System institution. Switch instantly — your choice persists across sessions.</div>
+      </a>
+      <a class="feature-card" href="getting-started.html" style="text-decoration:none;">
+        <div class="feature-card-icon">🏛️</div>
+        <div class="feature-card-title">Multi-Institution</div>
+        <div class="feature-card-desc">Connect multiple Canvas environments. Switch between institutions with one click from the home screen.</div>
+      </a>
+    </div>
+
+    <!-- Callout -->
+    <div class="callout">
+      💡 After Dark is built for Canvas <strong>administrators</strong>. It uses your existing browser session — no API token storage, no external servers, no third-party data sharing.
+    </div>
+
+    <!-- Quick video intro placeholder -->
+    <div style="margin-top: 48px;">
+      <div class="section-header">
+        <h1>See It In Action</h1>
+        <p>A quick overview of what After Dark can do.</p>
+      </div>
+      <div class="video-block" style="max-width: 720px;">
+        <div class="video-placeholder">
+          <div class="video-placeholder-icon"></div>
+          <span>Overview video coming soon</span>
+        </div>
+        <div class="video-caption">A 60-second tour of After Dark's main features.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <p>After Dark · Built by Brian Ledwell · University of Wisconsin Oshkosh</p>
+    <p style="margin-top:6px;"><a href="privacy.html">Privacy & Security</a> · <a href="faq.html">FAQ</a> · <a href="https://github.com" target="_blank">GitHub</a></p>
+  </footer>
+
+  <script>
+    // ── Theme Switcher ──
+    const STORAGE_KEY = 'adDocsTheme';
+    const html = document.documentElement;
+
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      document.querySelectorAll('.theme-dot').forEach(dot => {
+        dot.classList.toggle('active', dot.dataset.theme === theme);
+      });
+      localStorage.setItem(STORAGE_KEY, theme);
+    }
+
+    // Load saved theme
+    const saved = localStorage.getItem(STORAGE_KEY) || 'uwmilw';
+    applyTheme(saved);
+
+    // Wire dots
+    document.querySelectorAll('.theme-dot').forEach(dot => {
+      dot.addEventListener('click', () => applyTheme(dot.dataset.theme));
+    });
+
+    // Mark active nav link
+    document.querySelectorAll('.site-nav a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop());
+    });
+  </script>
+
+</body>
+</html>

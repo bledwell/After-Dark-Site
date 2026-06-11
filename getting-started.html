@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started — After Dark</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <img src="icon48.png" alt="After Dark skull icon" style="width:28px;height:28px;">
+        <span class="site-logo-text">After Dark</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="getting-started.html" class="active">Getting Started</a>
+        <a href="search-tools.html">Search Tools</a>
+        <a href="comparison-tools.html">Comparison Tools</a>
+        <a href="features.html">Features</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="theme-switcher" title="Switch theme">
+        <div class="theme-group">
+          <button class="theme-dot" data-theme="sandstone" style="background:#C4A878;" title="Sandstone"></button>
+          <button class="theme-dot" data-theme="greyblue"  style="background:#2A7A8A;" title="Greyblue"></button>
+          <button class="theme-dot" data-theme="coral"     style="background:#e8704a;" title="Coral"></button>
+          <button class="theme-dot" data-theme="classic"   style="background:#4a6fa5;" title="Classic"></button>
+        </div>
+        <div class="theme-group-divider"></div>
+        <div class="theme-group">
+          <button class="theme-dot" data-theme="oshkosh"  style="background:#ffcc00;" title="UWOSH"></button>
+          <button class="theme-dot" data-theme="uwmilw"   style="background:#ffbd00;" title="UWMILW"></button>
+          <button class="theme-dot" data-theme="stout"    style="background:#4A7C9F;" title="UWSTOUT"></button>
+          <button class="theme-dot" data-theme="greenbay" style="background:#1a6b52;" title="UWGB"></button>
+          <button class="theme-dot" data-theme="madison"  style="background:#c5050c;" title="UWM"></button>
+          <button class="theme-dot" data-theme="stevens"  style="background:#432C91;" title="UWSP"></button>
+          <button class="theme-dot" data-theme="uwec"     style="background:#2C3C88;" title="UWEC"></button>
+          <button class="theme-dot" data-theme="uwlax"    style="background:#83151d;" title="UWLAX"></button>
+          <button class="theme-dot" data-theme="uwp"      style="background:#1a5c38;" title="UWP"></button>
+          <button class="theme-dot" data-theme="uwplt"    style="background:#1A64B7;" title="UWPLT"></button>
+          <button class="theme-dot" data-theme="uwrf"     style="background:#D31145;" title="UWRF"></button>
+          <button class="theme-dot" data-theme="uwsup"    style="background:#FCCC2D;" title="UWSUP"></button>
+          <button class="theme-dot" data-theme="uww"      style="background:#512884;" title="UWW"></button>
+          <button class="theme-dot" data-theme="wisconsin" style="background:#005777;" title="Wisconsin"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1>Getting Started</h1>
+      <p>After Dark is a Chrome extension for Canvas LMS administrators. Install it once and it works automatically alongside any Canvas tab you have open.</p>
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <div class="install-banner">
+      <p>&#128128; After Dark is free and available on the Chrome Web Store.</p>
+      <a class="btn-install" href="https://chrome.google.com/webstore" target="_blank">Install from Chrome Web Store</a>
+    </div>
+
+    <div class="doc-section" id="install">
+      <h2>Step 1 &mdash; Install the Extension</h2>
+      <p>After Dark is distributed through the Chrome Web Store. It works in Chrome and any Chromium-based browser (Edge, Brave, Arc).</p>
+      <ol class="step-list">
+        <li>Click the <strong>Install from Chrome Web Store</strong> button above.</li>
+        <li>Click <strong>Add to Chrome</strong> on the store listing.</li>
+        <li>Confirm by clicking <strong>Add extension</strong> in the dialog.</li>
+        <li>The After Dark icon will appear in your browser toolbar.</li>
+      </ol>
+      <div class="tip-box">
+        <strong>Tip:</strong> If you don&apos;t see the icon right away, click the puzzle piece icon in your toolbar and pin After Dark so it&apos;s always visible.
+      </div>
+    </div>
+
+    <div class="doc-section" id="setup">
+      <h2>Step 2 &mdash; Run the Setup Wizard</h2>
+      <p>The first time you open After Dark, a setup wizard walks you through connecting to your Canvas instance. This only needs to be done once.</p>
+      <div class="video-embed">
+        <iframe width="1040" height="585" src="https://www.youtube.com/embed/5QclLRntMZU" title="01 After Dark - Setup Wizard" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="video-caption">Setup Wizard walkthrough — connecting After Dark to your Canvas instance.</div>
+      </div>
+      <ol class="step-list">
+        <li>Click the After Dark icon in your toolbar to open it.</li>
+        <li>The setup wizard launches automatically on first run.</li>
+        <li>Enter your institution name.</li>
+        <li>Enter your Canvas URL (e.g. <code>uwosh.instructure.com</code>). After Dark will attempt to detect this automatically if you have a Canvas tab open.</li>
+        <li>Optionally enter a vanity URL if your institution uses one (e.g. <code>canvas.uwosh.edu</code>).</li>
+        <li>Click <strong>Finish</strong>. After Dark will verify the connection and take you to the main search screen.</li>
+      </ol>
+      <div class="tip-box">
+        <strong>Connecting to Canvas:</strong> After Dark works by routing requests through your existing Canvas browser session &mdash; no API token or separate login required. Just make sure you have a Canvas tab open and logged in before opening After Dark.
+      </div>
+      <div class="tip-box">
+        <strong>Cross-environment users:</strong> If you need to compare courses across Live, Test, and Beta environments, you can add a second Canvas URL in Settings after the initial setup. Open both environment tabs in your browser before running comparisons.
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>After Dark &middot; Built by Brian Ledwell &middot; University of Wisconsin Oshkosh</p>
+    <p style="margin-top:6px;"><a href="privacy.html">Privacy &amp; Security</a> &middot; <a href="faq.html">FAQ</a></p>
+  </footer>
+
+  <script>
+    const STORAGE_KEY = 'adDocsTheme';
+    const html = document.documentElement;
+    function applyTheme(t) {
+      html.setAttribute('data-theme', t);
+      document.querySelectorAll('.theme-dot').forEach(d => d.classList.toggle('active', d.dataset.theme === t));
+      localStorage.setItem(STORAGE_KEY, t);
+    }
+    applyTheme(localStorage.getItem(STORAGE_KEY) || 'uwmilw');
+    document.querySelectorAll('.theme-dot').forEach(d => d.addEventListener('click', () => applyTheme(d.dataset.theme)));
+    document.querySelectorAll('.site-nav a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop());
+    });
+  </script>
+</body>
+</html>
