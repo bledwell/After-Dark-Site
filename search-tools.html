@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="site-logo" href="index.html">
-        <img src="icon48.png" alt="After Dark skull icon" style="width:28px;height:28px;">
+        <img src="eyeball.png" alt="After Dark" style="width:28px;height:28px;">
         <span class="site-logo-text">After Dark</span>
       </a>
       <nav class="site-nav">
@@ -23,7 +23,7 @@
         <a href="faq.html">FAQ</a>
         <a href="privacy.html">Privacy</a>
       </nav>
-      <div class="theme-switcher" title="Switch theme">
+      <div class="theme-switcher">
         <div class="theme-group">
           <button class="theme-dot" data-theme="sandstone" style="background:#C4A878;" title="Sandstone"></button>
           <button class="theme-dot" data-theme="greyblue"  style="background:#2A7A8A;" title="Greyblue"></button>
@@ -31,21 +31,24 @@
           <button class="theme-dot" data-theme="classic"   style="background:#4a6fa5;" title="Classic"></button>
         </div>
         <div class="theme-group-divider"></div>
-        <div class="theme-group">
-          <button class="theme-dot" data-theme="oshkosh"  style="background:#ffcc00;" title="UWOSH"></button>
-          <button class="theme-dot" data-theme="uwmilw"   style="background:#ffbd00;" title="UWMILW"></button>
-          <button class="theme-dot" data-theme="stout"    style="background:#4A7C9F;" title="UWSTOUT"></button>
-          <button class="theme-dot" data-theme="greenbay" style="background:#1a6b52;" title="UWGB"></button>
-          <button class="theme-dot" data-theme="madison"  style="background:#c5050c;" title="UWM"></button>
-          <button class="theme-dot" data-theme="stevens"  style="background:#432C91;" title="UWSP"></button>
-          <button class="theme-dot" data-theme="uwec"     style="background:#2C3C88;" title="UWEC"></button>
-          <button class="theme-dot" data-theme="uwlax"    style="background:#83151d;" title="UWLAX"></button>
-          <button class="theme-dot" data-theme="uwp"      style="background:#1a5c38;" title="UWP"></button>
-          <button class="theme-dot" data-theme="uwplt"    style="background:#1A64B7;" title="UWPLT"></button>
-          <button class="theme-dot" data-theme="uwrf"     style="background:#D31145;" title="UWRF"></button>
-          <button class="theme-dot" data-theme="uwsup"    style="background:#FCCC2D;" title="UWSUP"></button>
-          <button class="theme-dot" data-theme="uww"      style="background:#512884;" title="UWW"></button>
-          <button class="theme-dot" data-theme="wisconsin" style="background:#005777;" title="Wisconsin"></button>
+        <div class="theme-dropdown-wrap">
+          <button class="theme-dropdown-btn" id="themeDropBtn">Themes &#9662;</button>
+          <div class="theme-dropdown-menu" id="themeDropMenu">
+            <div class="theme-dropdown-item" data-theme="oshkosh"><span class="item-dot" style="background:#ffcc00;"></span>UWO</div>
+            <div class="theme-dropdown-item" data-theme="uwmilw"><span class="item-dot" style="background:#ffbd00;"></span>UWM</div>
+            <div class="theme-dropdown-item" data-theme="stout"><span class="item-dot" style="background:#4A7C9F;"></span>UWT</div>
+            <div class="theme-dropdown-item" data-theme="greenbay"><span class="item-dot" style="background:#1a6b52;"></span>UWGB</div>
+            <div class="theme-dropdown-item" data-theme="madison"><span class="item-dot" style="background:#c5050c;"></span>UWM</div>
+            <div class="theme-dropdown-item" data-theme="stevens"><span class="item-dot" style="background:#432C91;"></span>UWSP</div>
+            <div class="theme-dropdown-item" data-theme="uwec"><span class="item-dot" style="background:#2C3C88;"></span>UWEC</div>
+            <div class="theme-dropdown-item" data-theme="uwlax"><span class="item-dot" style="background:#83151d;"></span>UWL</div>
+            <div class="theme-dropdown-item" data-theme="uwp"><span class="item-dot" style="background:#1a5c38;"></span>UWP</div>
+            <div class="theme-dropdown-item" data-theme="uwplt"><span class="item-dot" style="background:#1A64B7;"></span>UWP</div>
+            <div class="theme-dropdown-item" data-theme="uwrf"><span class="item-dot" style="background:#D31145;"></span>UWRF</div>
+            <div class="theme-dropdown-item" data-theme="uwsup"><span class="item-dot" style="background:#FCCC2D;"></span>UWS</div>
+            <div class="theme-dropdown-item" data-theme="uww"><span class="item-dot" style="background:#512884;"></span>UWW</div>
+            <div class="theme-dropdown-item" data-theme="wisconsin"><span class="item-dot" style="background:#005777;"></span>UWS</div>
+          </div>
         </div>
       </div>
     </div>
@@ -143,19 +146,57 @@
 
   <footer class="site-footer">
     <p>After Dark &middot; Built by Brian Ledwell &middot; University of Wisconsin Oshkosh</p>
-    <p style="margin-top:6px;"><a href="privacy.html">Privacy &amp; Security</a> &middot; <a href="faq.html">FAQ</a></p>
+    <p style="margin-top:6px;"><a href="privacy.html">Privacy &amp; Security</a> &middot; <a href="faq.html">FAQ</a> &middot; <a href="https://chromewebstore.google.com/detail/after-dark/aoccljajpdfconiagnnafgeialahnkjh" target="_blank">Chrome Web Store</a></p>
   </footer>
 
   <script>
     const STORAGE_KEY = 'adDocsTheme';
     const html = document.documentElement;
+
+    const uwThemes = ['oshkosh','uwmilw','stout','greenbay','madison','stevens','uwec','uwlax','uwp','uwplt','uwrf','uwsup','uww','wisconsin'];
+    const genericThemes = ['sandstone','greyblue','coral','classic'];
+    const allThemes = [...genericThemes, ...uwThemes];
+
+    const dotColors = {
+      sandstone:'#C4A878', greyblue:'#2A7A8A', coral:'#e8704a', classic:'#4a6fa5',
+      oshkosh:'#ffcc00', uwmilw:'#ffbd00', stout:'#4A7C9F', greenbay:'#1a6b52',
+      madison:'#c5050c', stevens:'#432C91', uwec:'#2C3C88', uwlax:'#83151d',
+      uwp:'#1a5c38', uwplt:'#1A64B7', uwrf:'#D31145', uwsup:'#FCCC2D',
+      uww:'#512884', wisconsin:'#005777'
+    };
+
     function applyTheme(t) {
       html.setAttribute('data-theme', t);
-      document.querySelectorAll('.theme-dot').forEach(d => d.classList.toggle('active', d.dataset.theme === t));
       localStorage.setItem(STORAGE_KEY, t);
+
+      // Update generic dots
+      document.querySelectorAll('.theme-dot').forEach(d => d.classList.toggle('active', d.dataset.theme === t));
+
+      // Update dropdown items
+      document.querySelectorAll('.theme-dropdown-item').forEach(d => d.classList.toggle('active', d.dataset.theme === t));
+
+      // Update dropdown button
     }
-    applyTheme(localStorage.getItem(STORAGE_KEY) || 'uwmilw');
+
+    // On load — use stored theme or pick a random one
+    const stored = localStorage.getItem(STORAGE_KEY);
+    applyTheme(stored || allThemes[Math.floor(Math.random() * allThemes.length)]);
+
+    // Generic dots
     document.querySelectorAll('.theme-dot').forEach(d => d.addEventListener('click', () => applyTheme(d.dataset.theme)));
+
+    // Dropdown toggle
+    const btn = document.getElementById('themeDropBtn');
+    const menu = document.getElementById('themeDropMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', e => { e.stopPropagation(); menu.classList.toggle('open'); });
+      document.addEventListener('click', () => menu.classList.remove('open'));
+      document.querySelectorAll('.theme-dropdown-item').forEach(d => {
+        d.addEventListener('click', e => { e.stopPropagation(); applyTheme(d.dataset.theme); menu.classList.remove('open'); });
+      });
+    }
+
+    // Active nav
     document.querySelectorAll('.site-nav a').forEach(a => {
       a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop());
     });
